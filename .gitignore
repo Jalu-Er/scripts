@@ -1,13 +1,46 @@
+# =========================
 # Environment variables
+# =========================
 .env
 
+# =========================
 # Python
+# =========================
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+*.so
+
+# Virtual environments
 .venv/
 venv/
+env/
 
-# OS
-.DS_Store
+# =========================
+# OS specific
+# =========================
+# Linux
+*.log
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# =========================
+# Editors / IDEs
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# systemd runtime (Linux)
+# =========================
+*.service~
+
+# =========================
+# Temporary / backup files
+# =========================
+*~
+*.bak
+*.tmp
