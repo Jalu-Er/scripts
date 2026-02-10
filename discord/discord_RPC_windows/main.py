@@ -16,10 +16,11 @@ def main():
     while True:
         try:
             activity = detect_activity()
+            details, state, icon = activity
+
+            rpc.update(details, state, icon)
 
             if activity != last_activity:
-                details, state, icon = activity
-                rpc.update(details, state, icon)
                 log(f"Activity changed -> {details}")
                 last_activity = activity
 

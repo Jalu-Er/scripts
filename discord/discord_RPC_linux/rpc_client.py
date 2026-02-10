@@ -7,8 +7,7 @@ from config import DISCORD_APP_ID, LARGE_IMAGE, LARGE_TEXT, GITHUB_URL
 class DiscordRPC:
     def __init__(self):
         self.rpc = None
-        self.connected = False
-        self.start_time = time.time()
+        self.start_time = None
 
     def _discord_running(self):
         for p in psutil.process_iter(("name",)):
@@ -17,31 +16,31 @@ class DiscordRPC:
                 return True
         return False
 
-    def _connect(self):
+    def _new_client(self):
         self.rpc = Presence(DISCORD_APP_ID)
         self.rpc.connect()
-        self.connected = True
         self.start_time = time.time()
 
-    def _disconnect(self):
+    def _destroy_client(self):
         try:
             self.rpc.clear()
             self.rpc.close()
         except Exception:
             pass
         self.rpc = None
-        self.connected = False
+        self.start_time = None
 
     def update(self, details, state, icon):
         if not self._discord_running():
-            if self.connected:
-                self._disconnect()
+            if self.rpc:
+                self._destroy_client()
             return
 
-        if not self.connected:
+        if self.rpc is None:
             try:
-                self._connect()
+                self._new_client()
             except Exception:
+                self.rpc = None
                 return
 
         try:
@@ -56,4 +55,4 @@ class DiscordRPC:
                 start=self.start_time
             )
         except Exception:
-            self._disconnect()
+            self._destroy_client()
