@@ -28,12 +28,13 @@ This Windows version is designed to be simple, editable, and user-friendly.
 
 3. Open Command Prompt and navigate to:
 
+```
 Scripts\discord\discord_RPC_windows
-
+```
 4. Install required dependencies:
-
+```
 pip install -r requirements.txt
-
+```
 ---
 
 ## Environment Variable
@@ -41,10 +42,10 @@ pip install -r requirements.txt
 Set your Discord Application ID as an environment variable.
 
 Temporary (for testing):
-
+```
 set DISCORD_APP_ID=your_application_id
 python main.py
-
+```
 Permanent (recommended):
 
 - Open Environment Variables
@@ -59,9 +60,9 @@ Restart Command Prompt after setting it.
 ## Running the Script
 
 To run manually:
-
+```
 python main.py
-
+```
 If successful, logs will appear in the terminal and
 your Discord Rich Presence will update automatically.
 
@@ -70,18 +71,18 @@ your Discord Rich Presence will update automatically.
 ## Auto Start on Windows
 
 This folder includes a helper script:
-
+```
 start-discord-rpc.bat
-
+```
 This file starts the RPC script using the correct working directory.
 
 ### Enable Auto Start
 
 1. Press Win + R
 2. Type:
-
+```
 shell:startup
-
+```
 3. Press Enter
 4. Create a shortcut to start-discord-rpc.bat and place it in this folder
 
