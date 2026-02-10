@@ -1,29 +1,34 @@
 # Scripts
 
-A personal collection of miscellaneous scripts and small tools.
+A collection of personal and experimental scripts.
 
-This repository serves as a sandbox for experiments, utilities, and
-lightweight automation scripts across different domains such as:
-- Discord integrations
-- System utilities
-- Development helpers
-- Miscellaneous experiments
-
-## Repository Structure
-
-- Scripts
-- ├── discord # Discord-related scripts
-- ├── system # System & OS utilities
-- ├── automation # Automation helpers
-- ├── experiments # Experimental or learning scripts
-- ├── assets # Third-party logos and static resources
-- └── README.md
+This repository contains small utilities and tools built for learning,
+automation, and daily development workflows.
 
 ## Usage Notes
 
 - Each script directory contains its own README (if applicable)
 - Some scripts may require environment variables (`.env`)
-- Application IDs are public identifiers, but secrets/tokens are never included
+- Assets in the assets directory are for documentation and attribution only
+
+## Available Scripts
+
+### Discord Dynamic RPC
+
+Automatically updates Discord Rich Presence based on running applications.
+Application icons used by Discord RPC must be uploaded via Discord Developer Portal
+
+Choose your operating system:
+
+- Windows version  
+  Path: discord/discord_RPC_windows  
+  See: discord/discord_RPC_windows/README.md
+
+- Linux version (systemd-based)  
+  Path: discord/discord_RPC_linux  
+  See: discord/discord_RPC_linux/README.md
+
+---
 
 ## Third-Party Assets
 
@@ -40,4 +45,3 @@ All original code in this repository is licensed under the MIT License,
 unless stated otherwise in a specific directory.
 
 Third-party assets retain their original licenses.
-
