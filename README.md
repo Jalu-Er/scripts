@@ -11,13 +11,13 @@ lightweight automation scripts across different domains such as:
 
 ## Repository Structure
 
-Scripts
-├── discord # Discord-related scripts
-├── system # System & OS utilities
-├── automation # Automation helpers
-├── experiments # Experimental or learning scripts
-├── assets # Third-party logos and static resources
-└── README.md
+- Scripts
+- ├── discord # Discord-related scripts
+- ├── system # System & OS utilities
+- ├── automation # Automation helpers
+- ├── experiments # Experimental or learning scripts
+- ├── assets # Third-party logos and static resources
+- └── README.md
 
 ## Usage Notes
 
