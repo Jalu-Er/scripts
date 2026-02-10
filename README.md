@@ -20,13 +20,8 @@ Application icons used by Discord RPC must be uploaded via Discord Developer Por
 
 Choose your operating system:
 
-- Windows version  
-  Path: discord/discord_RPC_windows  
-  See: discord/discord_RPC_windows/README.md
-
-- Linux version (systemd-based)  
-  Path: discord/discord_RPC_linux  
-  See: discord/discord_RPC_linux/README.md
+- [Windows version](./discord/discord_RPC_windows)    
+- [Linux version](./discord/discord_RPC_linux) (systemd-based)  
 
 ---
 
