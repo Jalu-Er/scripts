@@ -63,5 +63,3 @@ If successful, your Discord Rich Presence will update automatically.
 ## License
 
 This project is licensed under the MIT License.
-
-````
